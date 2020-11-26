@@ -1,0 +1,32 @@
+<!--miniprogram/pages/user/user.wxml-->
+<!-- 头像 -->
+<view class="header">
+  <view class="user-phone">
+    <image mode="aspectFill" src="{{userPhone}}" class="head" bindtap="changeimg"></image>
+    <text class="size">{{userName}}</text>
+    <block wx:if="{{canIUse}}">
+    </block>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="btn">授权登录</button>
+  </view>
+</view>
+<block wx:if="{{canIUse}}">
+  <view class="content">
+    <view class="title">我的订单</view>
+    <view class="list-two">
+      <view class="sign">
+        <image src="../../images/movie.png" class="icon"></image>
+        <view>电影</view>
+      </view>
+      <view class="sign">
+        <image src="../../images/shop.png" class="icon"></image>
+        <view>商城</view>
+      </view>
+    </view>
+  </view>
+  <view class="fot">
+    <view class="fot-c">优惠券<image src="../../images/more.png" class="more"></image>
+    </view>
+    <view class="fot-c">折扣卡<image src="../../images/more.png" class="more"></image>
+    </view>
+  </view>
+</block>

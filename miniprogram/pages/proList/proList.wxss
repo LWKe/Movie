@@ -1,0 +1,148 @@
+/* miniprogram/pages/proList/proList.wxss */
+/* pages/proList/proList.wxss */
+/* 搜索部分 */
+.input {
+  display: flex;
+  flex-direction: row;
+  height: 75rpx;
+  width: 90%;
+  border-radius: 50rpx;
+  background-color: #e6e6e6;
+  margin-left: 5%;
+  margin-top: 30rpx;
+}
+
+.input icon {
+  margin: auto 20rpx;
+}
+.placehold {
+  width: 90%;
+  height: 75rpx;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  background-color: #e6e6e6;
+  border-radius: 50rpx;
+  margin: auto 0 auto 40rpx;
+}
+/* 好评电影部分 */
+/* .like{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 35rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+} */
+/* 滑动 */
+.page-section-spacing{
+  margin-top: 30rpx;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item{
+  height: 300rpx;
+}
+.scroll-view-item_H{
+  position: relative;
+  display: inline-block;
+  width: 225rpx;
+  height: 315rpx;
+  margin-left: 20rpx;
+}
+
+.spn{
+  display: inline-block;
+}
+/* 观众评分 */
+.wish-sz{
+  position: absolute;
+  width: 100%;
+  bottom: 5rpx;
+  color: #faaf00;
+  font-size: 30rpx;
+  text-align: center;
+}
+/* 观众评分背景 */
+.wish-bg{
+  position: absolute;
+  width: 220rpx;
+  height: 50rpx;
+  bottom: 0;
+  left: 0rpx;
+  background-image: linear-gradient(-180deg,rgba(77,77,77,0),#000);
+}
+
+.list-img{
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+/* 热门电影 */
+.title {
+  display: flex;
+  height: 130rpx;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 26rpx;
+  font-weight: 700;
+  line-height: 130rpx;
+  padding-left: 20rpx;
+  border-bottom: rgba(223, 223, 223,0.7) 1rpx solid;
+}
+.title text{
+  margin-left: 40rpx;
+  font-size: 35rpx;
+}
+.title text:nth-child(1){
+  margin-left: 0;
+}
+.lesson {
+  display: flex;
+  height: 260rpx;
+  padding-left: 20rpx;
+  margin-top: 26rpx;
+  border-bottom: rgba(223, 223, 223,0.7) 1rpx solid;
+}
+/* 图片样式 */
+.lessonPic {
+  height: 230rpx;
+  width: 170rpx;
+}
+/* 电影名称 */
+.typeface{
+  font-size: 42rpx;
+  font-weight: 600;
+  margin-bottom: 33rpx;
+}
+/* 右侧部分 */
+.lesson-r{
+  margin-left: 20rpx;
+}
+.score{
+  display: flex;
+  font-size: 31rpx;
+  font-weight: 200;
+  color: #666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 405rpx;
+  margin-top: 10rpx;
+}
+.start{
+  font-size: 35rpx;
+  font-weight: 700;
+  color: #faaf00;
+  margin-left: 15rpx;
+}
+.buy{
+  height: 70rpx;
+  width: 115rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+  font-size: 31rpx;
+  margin-top: 95rpx;
+  background-color: #f03d37;
+}

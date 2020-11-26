@@ -1,0 +1,48 @@
+<!--miniprogram/pages/proList/proList.wxml-->
+<!--pages/proList/proList.wxml-->
+<text></text>
+<view>
+  <view class='input'>
+    <icon class='searchimg' type='search' size='20' color='#405f80'></icon>
+    <input class='placehold' value='' placeholder='搜索电影'></input>
+  </view>
+  <!-- <view class="like">最受好评电影</view> -->
+  <view class="page-section-spacing">
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <view wx:for="{{movie_list}}" wx:key="id" class="spn">
+        <view class="scroll-view-item_H demo-text-1">
+          <view class="wish-bg"></view>
+          <view class="wish-sz">观众评分{{item.sc}}</view>
+          <image src="{{item.img}}" class="list-img">
+          </image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='title'>
+    <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+      <text>热映</text>
+      <text>影院</text>
+      <text>待映</text>
+      <text>经典电影</text>
+      <text>影评</text>
+    </scroll-view>
+  </view>
+  <view wx:for="{{list}}" wx:key="id">
+    <view class="lesson" bindtap="godetail"  data-id="{{index}}">
+      <image class="lessonPic" src="{{item.img}}"></image>
+      <view class="lesson-r">
+        <view class="typeface">{{item.nm}}
+        </view>
+        <view class="score">观众评 <view class="start">{{item.sc}}</view>
+        </view>
+        <view class="score">主演:{{item.star}}</view>
+        <view class="score">{{item.showInfo}}</view>
+
+      </view>
+      <view class="buy"  data-id="{{id}}">购票
+      </view>
+
+    </view>
+  </view>
+</view>

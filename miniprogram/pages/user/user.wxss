@@ -1,0 +1,94 @@
+/* miniprogram/pages/user/user.wxss */
+page {
+  background-color: rgb(243, 243, 243);
+}
+
+/* 头部样式 */
+.header {
+  height: 400rpx;
+  background-color: #029292;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.head {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.user-phone {
+  width: 180rpx;
+  height: 180rpx;
+  margin-top: 30rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+}
+.size{
+  font-size: 50rpx;
+}
+
+.btn {
+  position: absolute;
+  /* margin-top: 40rpx; */
+  top: 200rpx;
+  left: -125rpx;
+}
+
+/* 订单内容 */
+.content {
+  height: 300rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+  font-size: 40rpx;
+  font-weight: 100;
+}
+
+.list-two {
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+}
+
+/* 左右两部分 */
+.sign {
+  width: 50%;
+  text-align: center;
+}
+
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.fot {
+  height: 180rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+/* 底部内容 */
+.fot-c {
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 30rpx;
+  border-bottom: solid 1rpx rgb(243, 243, 243);
+}
+
+/* 更多图标 */
+.more {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 540rpx;
+  margin-top: 25rpx;
+}

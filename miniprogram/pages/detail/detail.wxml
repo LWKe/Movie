@@ -1,0 +1,137 @@
+<!-- 以下为正式版 -->
+<!--miniprogram/pages/detail/detail.wxml-->
+<view>
+  <!-- 头部部分 -->
+  <view class="top">
+    <view class="top-con">
+      <image src="{{detail.img}}"></image>
+      <view class="top-con-r">
+        <view class="fz">{{detail.nm}}</view>
+        <text>{{detail.ennm}}</text>
+        <text>{{detail.type}}</text>
+        <text>{{detail.star}}</text>
+        <text>{{detail.time}}</text>
+        <view class="btn">
+          <block wx:if="{{show}}">
+            <view class="btn-l" bindtap="shows">
+              <view class="btn-l-c">
+                <image src="../../images/want-to-watch.png"></image>
+                <view class="btn-l-c-fz">想看</view>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class="btn-l-f">
+              <view class="btn-l-c">
+                <view class="btn-l-c-fz-f">已想看</view>
+              </view>
+            </view>
+          </block>
+          <view class="btn-r">
+            <view class="btn-r-c">
+              <image src="../../images/star.png"></image>
+              <view class="btn-r-c-fz">看过</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 简介 -->
+    <view class="synopsis">
+      <view class="synopsis-top">简介</view>
+      <view class="synopsis-top-r" bindtap="shhi">
+        <view>{{word?'展开':'收起'}}</view>
+        <image class="{{word?'synopsis-top-r-img':'synopsis-top-r-img-u'}}" src="../../images/more.png"></image>
+      </view>
+    </view>
+    <view class="{{word?'details':'detail'}}">{{detail.synopsis}}</view>
+    <!-- 头部部分结束 -->
+    <view class="actor">
+      <view class="actor-top">演职人员</view>
+      <view class="actor-top-r" bindtap="shhi">
+        <view>全部</view>
+        <image class="actor-img" src="../../images/more.png"></image>
+      </view>
+    </view>
+    <!-- 演员列表 -->
+    <view class="actor-list">
+      <scroll-view class="actor-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view wx:for="{{detail.actorList}}" wx:key="id" class="spn">
+          <view class="actor-view-item_H demo-text-1">
+            <image src="{{item.img}}" class="list-img">
+            </image>
+            <view class="actor-name">{{item.name}}</view>
+            <view class="actor-act">{{item.act}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 视频列表 -->
+    <view class="video">
+      <view class="video-top">视频推荐</view>
+      <view class="video-top-r">
+        <view>全部</view>
+        <image class="actor-img" src="../../images/more.png"></image>
+      </view>
+    </view>
+    <view class="video-list">
+      <scroll-view class="video-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view wx:for="{{detail.video}}" wx:key="id" class="spn">
+          <view class="video-view-item_H">
+            <video class="video-c" src="{{item.con}}"></video>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 剧照列表 -->
+    <view class="video">
+      <view class="video-top">剧照</view>
+      <view class="video-top-r">
+        <view>全部{{detail.photo}}张</view>
+        <image class="actor-img" src="../../images/more.png"></image>
+      </view>
+    </view>
+    <view class="video-list">
+      <scroll-view class="video-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+        <view wx:for="{{detail.stills}}" wx:key="id" class="spn">
+          <view class="still-view-item_H">
+            <image class="still-c" src="{{item.still}}"></image>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 评论部分 -->
+  <view class="comment">
+    <view class="tip">短评</view>
+    <view wx:for="{{detail.comments}}" wx:key="id">
+      <view class="person">
+        <!-- 用户图片 -->
+        <view class="person-i">
+          <image src="{{item.img}}"></image>
+        </view>
+        <!-- 评论内容 -->
+        <view class="person-con">
+          <view class="person-con-top">
+            <view class="person-con-n">{{item.uname}}</view>
+            <image src="{{item.grade}}" class="person-con-n-img"></image>
+            <view class="praise">
+              <image class="praise-i" src="{{item.praise}}"></image>
+              <view>{{item.amount}}</view>
+            </view>
+          </view>
+          <view class="{{word?'person-content':'person-content-f'}}" bindtap="shhi">{{item.content}}</view>
+          <view class="person-btm">
+            <view class="data">{{item.data}}</view>
+            <view class="reply">{{item.reply}} 回复</view>
+          </view>
+        </view>
+        
+      </view>
+    </view><view class="logo">沙僧电影</view>
+  </view>
+</view>
+<view class="bottom">
+<image src="../../images/share-icon.png"></image>
+<view class="buy">特惠购票</view>
+</view>
